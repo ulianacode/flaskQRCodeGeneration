@@ -23,5 +23,5 @@ This is a simple web application built with Flask that generates QR codes and ba
 ## Libraries Used
 
 - Flask: Web framework for Python.
-- [Barcode Generator Library]([https://python-barcode.readthedocs.io/en/stable/index.html]): Library for generating barcodes.
-- [QR Code Generator Library]([https://pypi.org/project/qrcode/]): Library for generating QR codes.
+- [Barcode Generator Library](https://python-barcode.readthedocs.io/en/stable/index.html): Library for generating barcodes.
+- [QR Code Generator Library](https://pypi.org/project/qrcode/): Library for generating QR codes.
