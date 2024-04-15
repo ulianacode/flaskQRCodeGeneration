@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Barcode Generated</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #3494E6, #EC6EAD);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+                @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        h1 {
+            color: #fff;;
+            margin-top: 30px;
+        }
+        img {
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .back-button, .save-button {
+            font-size: 15px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Barcode Generated</h1>
+    <img src="{{ url_for('static', filename='barcode.png') }}" alt="Barcode"><br>
+    <button class="save-button" onclick="saveBarcode()">Save</button>
+    <button class="back-button" onclick="window.location.href = '/';">Back</button>
+
+    <script>
+        function saveBarcode() {
+            var link = document.createElement('a');
+            link.download = 'barcode.png';
+            link.href = "{{ url_for('static', filename='barcode.png') }}";
+            link.click();
+        }
+    </script>
+</body>
+</html>
